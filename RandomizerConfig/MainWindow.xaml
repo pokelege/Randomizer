@@ -1,0 +1,51 @@
+﻿<Window x:Class="RandomizerConfig.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RandomizerConfig">
+	<Window.Resources>
+		<Style TargetType="{x:Type Label}">
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="HorizontalAlignment" Value="Right"/>
+		</Style>
+		<Style TargetType="{x:Type RowDefinition}">
+			<Setter Property="Height" Value="Auto"/>
+		</Style>
+		<!--<Style TargetType="{x:Type ColumnDefinition}">
+			<Setter Property="Width" Value="100"/>
+		</Style>-->
+	</Window.Resources>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Label Content="Exe Code"/>
+		<ComboBox IsEditable="True" Grid.Column="1" Name="ExeCode" SelectionChanged="ExeCode_SelectionChanged"/>
+		<Button Grid.Column="2" Content="Add" Click="Add"/>
+		<Button Grid.Column="3" Content="Delete" Click="Delete"/>
+		<Label Grid.Row="1" Content="Executable"/>
+		<TextBox Grid.Row="1" Grid.Column="1" Name="Executable"/>
+		<Button Grid.Row="1" Grid.Column="2" Content="Browse" Click="BrowseExe"/>
+		<Label Grid.Row="2" Content="Game Path"/>
+		<TextBox Grid.Row="2" Grid.Column="1" Name="GamePath"/>
+		<Button Grid.Row="2" Grid.Column="2" Content="Browse" Click="BrowseGame"/>
+		<Label Grid.Row="3" Content="Extension Filter (Comma Seperated)"/>
+		<TextBox Grid.Row="3" Grid.Column="1" Name="Extension"/>
+		<Label Grid.Row="4" Content="Left Arguments"/>
+		<TextBox Grid.Row="4" Grid.Column="1" Name="LeftArgs"/>
+		<Label Grid.Row="5" Content="Right Arguments"/>
+		<TextBox Grid.Row="5" Grid.Column="1" Name="RightArgs"/>
+		<Button Grid.Row="9999" Grid.Column="2" Content="Save" Click="Save"/>
+	</Grid>
+</Window>
