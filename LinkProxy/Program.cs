@@ -14,9 +14,9 @@ namespace LinkProxy
 			
 			if(args.Length > 0)
 			{
-				//ProcessStartInfo info = new ProcessStartInfo( args[0] );
-				//info.CreateNoWindow = true;
-				//Process whatever = Process.Start( info );
+				ProcessStartInfo info = new ProcessStartInfo( args[0] );
+				info.CreateNoWindow = true;
+				Process whatever = Process.Start( info );
 			}
 		}
 	}
