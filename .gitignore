@@ -7,7 +7,6 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Compiled Static libraries
 *.lai
@@ -16,6 +15,5 @@
 *.lib
 
 # Executables
-*.exe
 *.out
 *.app
