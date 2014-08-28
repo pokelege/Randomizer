@@ -30,7 +30,7 @@ namespace Trimmer
 				{
 					string fileName = Path.GetFileNameWithoutExtension( i );
 					string[] theTrim = fileName.Split( "[]()".ToCharArray(), StringSplitOptions.RemoveEmptyEntries );
-					string theResult = theTrim[0];
+					string theResult = theTrim[0].Trim();
 					string thePath = Path.GetDirectoryName( i );
 					if ( !thePath.EndsWith( "" + Path.DirectorySeparatorChar ) )
 					{
